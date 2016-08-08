@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bilibili.persistence.IUserDao">
+
+	
+	<select id="login" parameterType="User" resultType="User">
+		select * from buser where account = #{account} and password = #{password}
+	</select>
+	
+	<insert id="regist" parameterType="User">
+		insert into buser(id,account,password,nickname) values(buser_seq.nextval,#{account},#{password},#{nickname})
+	</insert>
+	
+	<select id="getConcern" resultType="Integer">
+		select count(user_id) from concernup where up_id = #{param1} and user_id = #{param2.id}
+	</select>
+	<!-- 添加关注 -->
+	<insert id="addConcern">
+		insert into concernup(up_id,user_id) values(#{param1},#{param2.id})
+	</insert>
+	<!-- 获取所有图片信息 -->
+	<select id="getUserPic" resultType="Pictures">
+		 select * from pictures where type = #{param1}
+	</select>
+	
+	<!-- 更新用户图片和等级 -->
+	<update id="updatePic" parameterType="User">
+		update buser set facepath = #{facepath},userbg =#{userbg},userlevel =#{userlevel} where id = #{id}
+	</update>
+	
+	<!-- 更新用户昵称、签名、性别 -->
+	<update id="updateInfo" parameterType="User">
+		update buser set nickname = #{nickname},sign =#{sign},sex =#{sex} where id = #{id}
+	</update>
+	
+</mapper>

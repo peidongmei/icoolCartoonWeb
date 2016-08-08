@@ -1,0 +1,142 @@
+
+/*============================下面的BODY部分=========================*/
+#pagebody{
+	margin: 90px auto;
+	width: 980px;
+	height: 364px;
+}
+#pagebody_top{
+	width: 980px;
+	height: 28px;
+	border-bottom: solid 2px #f1f1f1;
+}
+
+/*===========================中间的登录大字==========================*/
+#pic_zhuce{
+	width: 120px;
+	height: 47px;
+	margin: 91px auto 0;
+	background: url(../img/t1.png);
+}
+/*===========================下面的注册表单==========================*/
+/*所有左浮动*/
+.float_left{
+	float: left;
+}
+
+#pagebody_undear{
+	width: 980px;
+	height: 457px;
+}
+#pagebody_undear #pagebody_center{
+	width: 415px;
+	margin: 23px auto 0;
+	/*background: greenyellow;*/		 /*================以后去掉================*/
+}
+.input_div{
+	float: left;
+	width: 415px;
+	height: 36px;			 /*================以后去掉================*/
+}
+/*昵称，密码，验证码框框*/
+#nickname,#pwd,#yanzhengma{
+	width: 404px;
+	height: 38px;
+	border-radius: 2px;
+	border: solid 1px #dfdfdf;
+	padding-left: 10px;
+	font-size: 12px;
+}
+/*号码归属地选择*/
+#country{
+	width: 91px;
+	height: 40px;
+	color: #717171;
+	font-size: 12px;
+}
+/*号码输入框*/
+#phone_number_input{
+	margin-left: 6px;
+	width: 304px;
+	height: 36px;
+	border-radius: 2px;
+	border: solid 1px #dfdfdf;
+	padding-left: 10px;
+	font-size: 12px;
+}
+/*通过邮箱注册链接*/
+#email_reigst{
+	display: inline-block;
+	float: right;
+	margin-top: 20px;
+	font-size: 12px;
+	color: #00A0D8;
+}
+/*给中间的一些超链接加样式*/
+.regist_lianjie{
+	font-size:12px;
+	color: #00A0D8;
+}
+#pagebody_undear .regist_lianjie:hover{
+	color: hotpink;
+}
+
+#pwd_place,#phone_place{
+	margin-top: 46px;
+}
+#yanzheng_place{
+	margin-top: 9px;
+}
+/*获取验证码*/
+#get_yanzhengma{
+	float: right;
+	display: inline-block;
+	margin-top: -34px;
+	font-size: 12px;
+	width: 128px;
+	height: 36px;
+	color: white;
+	background: #00a1d6;
+	border: solid 1px #00a1d6;
+	border-radius: 2px;
+}
+/*让里面的文字居中*/
+#get_text{
+	float: left;
+	margin-top: 9px;
+	margin-left: 40px;
+}
+#get_yanzhengma:hover{
+	background: deepskyblue;
+}
+/*用户同意条款*/
+#agree_place{
+	font-size: 12px;
+	float: left;
+	margin-top: 23px;
+	color: #717171;
+	width: 415px;
+	height: 12px;
+}
+#agree_button{
+	float: left;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+/*注册提交按钮*/
+#submit{
+	float: left;
+	width: 415px;
+	height: 42px;
+	background: #f9f9f9;
+	color: #aaa;
+	border: solid 1px ghostwhite;
+	border-radius: 2px;
+	margin-top: 49px;
+}
+/*最后面直接登录的链接*/
+#to_login{
+	margin-top: 14px;
+	float: right;
+}
+/*==========================底部的===========================*/

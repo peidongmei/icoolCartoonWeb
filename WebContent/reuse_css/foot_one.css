@@ -1,0 +1,173 @@
+/*所有超链接样式*/
+#footer a{
+	text-decoration: none;
+	color: #222;
+}
+#footer a:hover{
+	color: dodgerblue;
+}
+#footer{
+	width: 100%;
+	height: 280px;
+	background: #F6F9FA;
+	float: left;
+	margin-top: 34px;
+}
+#footer #foot_mid{
+	width: 980px;
+	height: 200px;
+	margin: 30px auto;
+	/*background: gainsboro;*/            /* =============以后去掉============*/
+}
+#footer #foot_mid #foot_mid_top{
+	width: 980px;
+	height: 100px;
+	font-size: 14px;
+	/*background: pink;*/				/* =============以后去掉============*/
+}
+.many_links,.foot_nav{
+	width: 86px;
+	height: 22px;
+	float: left;
+
+	/*border: solid 1px black;*/			/* =============以后去掉============*/
+}
+
+.foot_nav{
+	color: #717171;
+}
+
+
+#foot_mid_top_left,#foot_mid_top_mid,#foot_mid_top_right{
+	float: left;
+}
+
+#foot_mid_top_left{
+	width: 306px;
+	height: 100px;
+	/*background: pink;*/				/* =============以后去掉============*/
+}
+.foot_nav{
+	width: 306px;
+	margin-top: 1px;
+}
+/*#about_us_one,#about_us_two{
+	margin-top: 12px;
+}*/
+.first_level{
+	margin-top: 12px;
+}
+#about_us_three{
+	width: 100px;
+	height: 36px;
+	margin-top: 16px;
+	background: url(../img/b-taobao.png);
+}
+#about_us_three #bilibili_taobao{
+	padding: 0 100px 18px 0;
+}
+#about_us_four,#about_us_five{
+	position: relative;
+	top: -18px;
+}
+
+#foot_mid_top_mid{
+	width: 336px;
+	height: 100px;
+	border-left: solid 1px #e5e9ef;			
+	
+}
+
+#foot_mid_top_right{
+	width: 336px;
+	height: 100px;
+	border-left: solid 1px #e5e9ef;			
+}
+
+#help_center_one,#help_center_four,#foot_nav_two{
+	margin-left: 30px;
+}
+#help_center_three{
+	margin-left: 20px;
+}
+#help_center_five{
+	width: 120px;
+}
+/*#help_center_one,#help_center_two,#help_center_three{
+	margin-top: 12px;
+}*/
+#gateway_one,#gateway_four,#gateway_seven,#gateway{
+	margin-left: 30px;
+}
+/*=====================最后的声明=================*/
+#foot_mid_under_left{
+	height: 76px;
+	width: 650px;
+	/*background: greenyellow;  */             /* =============以后去掉=============*/
+	margin-top: 23px;
+}
+
+.last_foot_blocks{
+	height: 80px;
+	float: left;
+}
+#foot_one{
+	width: 106px;
+	height: 76px;
+	background: url(../img/footpic.gif) no-repeat;
+}
+#foot_two{
+	width: 268px;
+	margin-top: -6px;
+	margin-left: 10px;
+}
+#foot_three{
+	width: 214px;
+	height: 48px;
+}
+.foot_span{
+	font-size: 12px;
+	/*display: inline-block;*/
+	color: #717171;
+	float: left;
+	margin-top: 7px;
+}
+#foot_three{
+	width: 214px;
+	height: 48px;
+	margin-top: -6px;
+	margin-left: 8px;
+}
+
+#foot_mid_under_right{
+	float: right;
+	margin-top: -76px;
+	width: 310px;
+	height: 80px;
+}
+#foot_mid_under_right a{
+	text-align: center;
+	display: inline-block;
+}
+#pic_phone,#pic_weibo,#pic_weixin{
+	width: 65px;
+	height: 65px;
+	text-align: center;
+}
+.last_links{
+	font-size: 12px;
+	position: relative;
+	top: -5px;
+}
+#pic_phone{
+	background: url(../img/icons.png) -1025px -193px no-repeat;
+}
+#pic_weibo{
+	background: url(../img/icons.png) -1025px -321px no-repeat;
+}
+#pic_weixin{
+	background: url(../img/icons.png) -1025px -65px no-repeat;
+}
+#weixin,#weibo{
+	margin-left: 20px;
+}

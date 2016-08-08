@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/userLogin.css"/>
+		<link rel="stylesheet" type="text/css" href="reuse_css/regist_head.css"/>
+		<script src="js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		 <title>哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title> 
+			<link rel="shortcut icon" href="/bilibili/img/favicon.ico">
+	</head>
+	<body>
+		<div id="head"></div>
+		<div id="pagebody">
+			<div id="pagebody_mid">
+				<div id="pagebody_top">
+					<div id="pic_login">
+					</div>
+				</div>
+				<div id="pagebody_under">
+					<div id="under_left">
+						<div id="under_left_in">
+							<div id="erweima"></div>
+							<p id="get_erweima">扫描二维码登录</p>
+							<p id="to_client">请使用<a id="client_url" href="https://app.bilibili.com/" target="_blank">哔哩哔哩客户端</a></p>
+						</div>
+						<div id="bilibili_niang"></div>
+						<div id="small_tv"></div>
+					</div>
+					<div id="line"></div>
+					<div id="under_right">
+						<form id="user_form" action="/bilibili/user/login" method="post">
+							<div class="bbz" id="box_one" >
+								<input type="text" name="account" id="e_mail" placeholder="你的手机号/邮箱" value="" />
+							</div>
+							<div class="bbz" id="box_two">
+								<input type="password" name="password" id="pwd" placeholder="密码" value="" />
+							</div>
+							<div class="bbz" id="box_three">
+								<a id="forget_pwd" href="https://passport.bilibili.com/resetpwd">忘记密码？></a>
+								<input type="text"  id="yanzhenma" placeholder="验证码" value="" />
+							</div>
+							<div id="box_four">
+								<input type="checkbox" checked="checked" id="remember" value="" />
+								<label id="for_remember" for="remember">记住我</label>
+								<span id="attention">
+									不是自己的电脑上不要勾此选项
+								</span>
+							</div>
+							<div id="box_five">
+								<input type="submit" name="login_in" id="login_in" value="登录" />
+								<a id="to_regist" href="https://passport.bilibili.com/register/phone"><span id="zhuce">注册</span></a>
+							</div>
+							<div id="box_six">
+								<div id="weibo_login">
+								
+									<a id="weibo_lianjie" href="https://api.weibo.com/oauth2/authorize?client_id=2841902482&redirect_uri=http://member.bilibili.com/login/snsback?sns=weibo&scope=email">微博账号登录</a>
+								</div>
+								<div id="qq_login">
+									<a id="qq_lianjie" href="https://graph.qq.com/oauth/show?which=Login&display=pc&response_type=code&client_id=101135748&redirect_uri=http://member.bilibili.com/login/snsback?sns=qq&&state=authorize&scope=do_like,get_user_info,get_simple_userinfo,get_vip_info,get_vip_rich_info,add_one_blog,list_album,upload_pic,add_album,list_photo,get_info,add_t,del_t,add_pic_t,get_repost_list,get_other_info,get_fanslist,get_idollist,add_idol,del_idol,get_tenpay_addr">QQ账号登录</a>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	<div id="foot"></div>
+	</body>
+		<script type="text/javascript">
+		/*加载通用头部和尾部*/
+			$("#head").load("reuse/regist_head.html");
+			$("#foot").load("reuse/foot_one.html #footer");
+		</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

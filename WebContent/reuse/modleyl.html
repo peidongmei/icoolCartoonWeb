@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>科技 - 哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title>
+		<link rel="shortcut icon" href="/bilibili/img/favicon.ico">
+	</head>
+	<body>
+		<div id="sample" class="modle m-yl clearfix">
+			<!--科技左半部分-->
+			<div class="b-l sample-b-l">
+				<div class="b-head sample-b-head">
+					<div class="b-head-l">
+						<cc style="display: block;float:left;width: 45px;height: 40px;background: url(img/icons.png) -139px -1031px;margin-top: -8px;"></cc>
+						<span class="b-head-t sample-b-head-t"><a href=""><h2>娱乐</h2></a></span>
+						<ul  class="b-tab sample-b-tab">
+							<li class="on0 sample-on0"><b></b>有新动态</li>
+							<li class="on1 sample-on1"><b></b>最新投稿</li>
+						</ul>
+					</div>
+					<div class="b-link-more sample-b-link-more"><a href="">更多<b></b></a></div>
+					<div class="read-push sample-read-push"><span class="icon-refresh sample-icon-refresh"></span><span class="info sample-info"><b>222</b><em>条新动态</em></span></div>
+				</div>
+				<div class="b-body sample-b-body">
+					<!--=========================有新动态==============================-->
+					<ul class="v-list v-list0000 clearfix" id="modleyl">
+						
+					</ul>
+					<script type="text/javascript">
+						$(function () {
+							$.getJSON('/bilibili/video/queryyl',function (data) {
+									$('#modleyl').empty();
+									var html ='';
+									$.each(data,function (index,item) {
+										html += '<li id="'+item['id']+'"><div class="v sample-v"><a href="#" class="preview sample-preview" title="'+item['name']+'"><img src="'+
+										item['picture']+'"/><div class="x sample-x"><b class="x2">'+item['videolen']+'</b></div></a><a href="" title="'+item['name']+'"><div class="t sample-t">'+
+										item['name']+'</div><div class="i sample-i"><span><i class="icon play"></i>'+item['clicknum']+'</span><span><i class="icon dm"></i>'+item['danmus']+'</span></div></a></div></li>';
+									})
+									$('#modleyl').html(html);
+								})
+						})
+					</script>
+					<!--====================最新投稿======================================-->
+					<ul class="v-list v-list0001 clearfix unselected">
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+						<li><div class="v sample-v"><a href="" class="preview sample-preview" title="【六集纪录片】天启-二战启示录">
+							<img src="" />
+							<div class="x sample-x"><b class="x2">279:31</b></div>
+						</a>
+						<a href="" title="【六集纪录片】天启-二战启示录">
+							<div class="t sample-t">纪录片《天路故事》第一集</div>
+							<div class="i sample-i"><span><i class="icon play"></i>2.8万</span><span><i class="icon dm"></i>1748</span></div>
+						</a></div></li>
+					</ul>
+				</div>
+			</div>
+			<!--========================================右半部分=====================================-->
+			<div class="b-r sample-b-r">
+				<!--===================科技右半部分head======================-->
+				<div class="b-head sample-b-head clearfix">
+					<div class="left sample-left">
+						<span class="b-head-t sample-b-head-t">热门</span>
+						<ul class="b-tab sample-b-tab clearfix" id="b-tab1">
+							<li class="on"><b></b>全部</li>
+							<li><b></b>原创</li>
+						</ul>
+					</div>
+					<div class="right" style="position: relative;">
+						<div class="b-slt0 b-slt modle-b-slt"><span class="txt modle-txt">一周</span><div class=" b-arrow"></div>
+							<ul class="tab tab00 unselected">
+								<li>三日</li>
+							</ul>
+						</div>
+						<div class="b-slt1 b-slt modle-b-slt unselected" style="position: absolute;top:0px;left:0;background: white;"><span class="txt modle-txt">三日</span><div class=" b-arrow"></div>
+							<ul class="tab tab01 unselected">
+								<li>一周</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--===================科技右半部分body======================-->
+				<div class="b-body sample-b-body b-body2" id="b-body3">
+					<ul>
+						<li id="rollplay1" class="roll">
+						<ul class="list" id="yl_paiming">
+							
+						</ul>
+						<script type="text/javascript">
+								var numyl =0;
+							$.getJSON('/bilibili/video/queryylpx',function (data) {
+								$('#yl_paiming').empty();
+								var html ='';
+								
+								$.each(data,function (index,item) {
+									numyl = numyl +1;
+									html += '<li class="list2 clearfix" id="'+item['id']+'"><div class="square active"><span>'+numyl
+									+'</span></div><a href="" class="dh_pic"><img class="list-img" src="'+item['picture']+'"></img></a><a href="" class="info sample-info" title="'+item['name']
+									+'"><div class="title">'+item['name']+'</div><div class="evaluate">评分：'+item['pingfen']+'</div></a></li>'
+								})
+								$('#yl_paiming').html(html);
+								$('#yl_paiming .list2').eq(0).addClass("list1");
+								$('#yl_paiming .list1').removeClass("list2");
+								$('#yl_paiming .list2 .dh_pic').css("display","none");
+								$('#yl_paiming .list1 a:last').removeClass("info sample-info");
+								$('#yl_paiming .list1 a:last').addClass("rl-info");
+							   /*  $('.list2 div').removeClass("active");  */
+								$('#yl_paiming .square').eq(3).removeClass("active");
+								$('#yl_paiming .square').eq(4).removeClass("active");
+								$('#yl_paiming .square').eq(5).removeClass("active");
+								$('#yl_paiming .square').eq(6).removeClass("active");  
+								$('#yl_paiming .evaluate').css("display","none");
+								$('#yl_paiming .evaluate').eq(0).css("display","block");
+							})
+						</script>
+						<ul class="list" >
+							<li class="list1 clearfix">
+								<div class="square active"><span>2</span></div>
+								<a href=""><div class="list-img"></div></a>
+								<a href="" class="rl-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉]</div>
+									<div class="evaluate">综合评分：6.0万</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square active"><span>2</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square active"><span>3</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>4</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>5</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>6</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>7</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+						</ul>
+						</li>
+						<li id="rollplay2" class="roll unselected" >
+						<ul class="list">
+							<li class="list1 clearfix">
+								<div class="square active"><span>3</span></div>
+								<a href=""><div class="list-img"></div></a>
+								<a href="" class="rl-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉]</div>
+									<div class="evaluate">综合评分：6.0万</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square active"><span>2</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square active"><span>3</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>4</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>5</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>6</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>7</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+						</ul>
+						<ul class="list" >
+							<li class="list1 clearfix">
+								<div class="square active"><span>4</span></div>
+								<a href=""><div class="list-img"></div></a>
+								<a href="" class="rl-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉]</div>
+									<div class="evaluate">综合评分：6.0万</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square active"><span>2</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square active"><span>3</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>4</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>5</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>6</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+							<li class="list2">
+								<div class="square"><span>7</span></div>
+								<a href="" class="info sample-info" title="纪录片.BBC.中国设计.Click.2016.Designed.In.China[高清][生肉] 播放:53665 24:30">
+									<div class="title">【BBC】大自然奇葩【夏末秋字幕组/中英双语】</div>
+								</a>
+							</li>
+						</ul>
+						</li>
+					</ul>
+				</div>
+					<div class="more-link"><a href="">查看更多<b></b></a></div>
+			</div>
+		</div>
+	</body>
+</html>

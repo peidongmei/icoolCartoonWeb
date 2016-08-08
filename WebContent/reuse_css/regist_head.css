@@ -1,0 +1,162 @@
+li{
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+	margin-top: -5px;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+.home{
+	float: left;
+	margin-left: -50px;
+	padding-left: 2px;
+	background: url(../img/icons.png) -920px -84px no-repeat;
+}
+
+.friend{
+	float: left;
+	margin-left: 5px;
+}
+#head_mid_nav{
+	width: 379px;
+	height: 42px;
+}
+#head_all{
+	background:white;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#head_mid{
+	width: 980px;
+	height: 42px;
+	margin: -1px auto 0px;
+	position: relative;
+}
+.clearFix:after{
+	content: none;
+	display: block;
+	clear: both;
+}
+.nav{
+	padding-left: 20px;
+	font-size: 13px;
+}
+/*======================超链接激活时显示蓝色==================*/
+a:hover{
+	color: dodgerblue;
+}
+#head_mid_select{
+	width: 171px;
+	height: 42px;
+	float: right;
+	margin-right: -4px;
+	margin-top: -58px;
+}
+#tougaoqu{
+	float: right;
+	margin-top: -30px;
+	font-size: 13px;
+}
+#tougaoqu{
+	width: 58px;
+	height: 48px;
+	text-align: center;
+	background: url(../img/b-post.png);
+	/*此处为了覆盖下面的背景图片，使用了浮动*/
+	position: absolute;
+	font-size: 14px;
+	left: 912px;
+	top: 15px;
+	z-index: 2;
+}
+#tougaoqu #i_tougao{
+	position: relative;
+	top: 11px;
+	color: white;
+}
+#i_account{
+	position: relative;
+	top: 2px;
+	right: 34px;
+	font-size: 13px;
+}
+#i_account .i_select{
+	float: right;
+	margin-right: 10px;
+}
+#i_regist{
+	padding-left: 10px;
+}
+/*================右上角的小竖线================*/
+.little_split{
+	float: right;
+	height: 12px;
+	border-left: solid 1px #222;
+	margin-top: 4px;
+}
+
+#head_mid_search{
+	height: 32px;
+	width: 107px;
+	position: absolute;
+	left: 669px;
+	top: -10px;
+}
+#head_mid_search:hover{
+	width: 207px;
+	left: 569px;
+}
+#head_mid_search #user_search_input{
+	display: inline-block;
+	float: right;
+	padding-left: 10px;
+	border-radius: 16px;
+	border: solid 1px #ccd0d7;
+	width: 107px;
+	height: 28px;
+	font-size: 12px;
+	color: darkgray;
+	outline: none;
+	transition: width,1s;
+}
+#head_mid_search:hover #user_search_input{
+	width: 177px;
+}
+#head_mid_search #user_search_input:focus{
+	width: 177px;
+}
+#head_mid_search #confirm_search{
+	display: none;
+	height: 20px;
+	width: 20px;
+}
+#head_mid_search #replace_confirm_sear{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url(../img/icons.png) -791px -728px no-repeat;
+	top: 7px;
+	right: 10px;
+}
+#head_mid_search #replace_confirm_sear:hover{
+	background: url(../img/icons.png) -728px -728px no-repeat;
+	cursor: pointer;
+}
+#nextheader{
+	position: absolute;
+	top: 42px;
+	left: 0px;
+	width: 100%;
+	height: 86px;
+	background: #00a0d8;
+	z-index: 1;
+}
+#mid_bg{
+	width: 980px;
+	height: 106px;
+	margin: 0px auto;
+	background: url(../img/rl_top.png) no-repeat;
+}

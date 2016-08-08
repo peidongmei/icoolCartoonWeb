@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bilibili.persistence.IVideoDao">
+
+
+	<select id="searchvideo" parameterType="String" resultType="String">
+		<!-- select name from video where name like CONCAT(CONCAT('%', #{sval}), '%') -->
+		select name,count(*) from video where name like CONCAT(CONCAT('%', #{sval}), '%') group by name
+	</select>
+	
+	<select id="querydh" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'DH' and 9 > rownum  order by id desc
+	</select>
+	<select id="querydhpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'DH' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="queryfj" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'FJ' and 9 > rownum  order by id desc
+	</select>
+	<select id="queryfjpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'FJ' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="queryyy" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'YY' and 9 > rownum  order by id desc
+	</select> 
+	<select id="queryyypx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'YY' and 8 > rownum  order by clicknum desc
+	</select> 
+	<select id="querygc" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'GC' and 9 > rownum  order by id desc
+	</select>
+	<select id="querygcpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'GC' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="querywd" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'WD' and 9 > rownum  order by id desc
+	</select>
+	<select id="querywdpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'WD' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="queryyx" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'YX' and 9 > rownum  order by id desc
+	</select>
+	<select id="queryyxpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'YX' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="querykj" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'KJ' and 9 > rownum  order by id desc
+	</select>
+	<select id="querykjpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'KJ' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="querysh" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'SH' and 9 > rownum  order by id desc
+	</select>
+	<select id="queryshpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'SH' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="queryss" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'SS' and 9 > rownum  order by id desc
+	</select>
+	<select id="querysspx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'SS' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="querydy" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'DY' and 9 > rownum  order by id desc
+	</select> 
+	<select id="querydypx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'DY' and 8 > rownum  order by clicknum desc
+	</select>
+	<select id="queryzb" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'ZB' and 9 > rownum  order by id desc
+	</select> 
+	<select id="queryzbpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'ZB' and 8 > rownum  order by clicknum desc
+	</select> 
+	<select id="querytv" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'TV' and 9 > rownum  order by id desc
+	</select> 
+	<select id="querytvpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'TV' and 8 > rownum  order by clicknum desc
+	</select> 
+	<select id="queryyl" resultType="Video">
+		select id,name,picture,videolen,clicknum,danmus from video where type = 'YL' and 9 > rownum  order by id desc
+	</select> 
+	<select id="queryylpx" resultType="Video">
+		select id,name,picture,pingfen,clicknum from video where type = 'YL' and 8 > rownum  order by clicknum desc
+	</select> 
+	
+	<select id="getInfo" resultMap="queryVideoBox">
+		select upload_id,id from video where id = #{param1}
+	</select>
+	<resultMap type="VideoBox" id="queryVideoBox">
+		<association property="user" column="upload_id" select="queryUserById"></association>
+		<association property="video" column="id" select="queryVideoById"></association>
+	</resultMap>
+	<select id="queryUserById" resultType="User">
+		select * from buser where id = #{param1}
+	</select>
+	<select id="queryVideoById" resultType="Video">
+		select * from video where id = #{param1}
+	</select>
+	
+</mapper>

@@ -1,0 +1,583 @@
+@CHARSET "UTF-8";
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+a{	
+	color: black;
+	font-size: 12px;
+	font-family: "微软雅黑";
+	text-decoration: none;
+}
+a:hover{
+	
+	text-decoration: none;
+}
+
+/* Custom Styles *//*============导航栏样式开始=============*/
+.nav-tabss{
+	width: 46px;
+	height: 441px;
+	border: 1px #e5e9ef solid;
+	position: fixed;
+	top: 230px;
+	right: 120px;
+	background: #f6f9fa;
+	border-radius: 5px;
+	z-index: 3000;
+}
+.nav-tabss li{
+	width: 46px;
+	height: 32px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 32px;
+	font-family: "宋体";
+	font-weight: 200;
+}
+.nav-tabss li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.nav-tabss a:hover{
+	background: #00a1d6;
+}
+.paixu {
+	width: 46px;
+	height: 32px;
+	font-size: 12px;
+	text-align: center;
+	line-height: 32px;
+	cursor: pointer;
+	font-family: "宋体";
+	font-weight: 200;
+	background: #f6f9fa;
+}
+.paixu b{
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url(../img/iconss.png) -662px -151px;
+	margin-left: 11px;
+	margin-top: 8px;
+	margin-bottom: -3px;
+}
+.paixu:hover{
+	background: #00a1d6;
+}
+.paixu:hover a{
+	color: white;
+}
+.paixu:hover b{
+	background: url(../img/iconss.png) -726px -151px;
+}
+#nav_returntop{
+	height: 50px;
+	border: 1px solid #e5e9ef;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#nav_returntop b{
+	display: block;
+	width: 20px;
+	height: 15px;
+	background: url(../img/iconss.png) -664px -90px;
+	margin-left: 13px;
+	margin-top: 18px;
+}
+#nav_returntop:hover{
+	background: #00a1d6;
+}
+#nav_returntop:hover b{
+	background: url(../img/iconss.png) -728px -90px;
+}
+#nav_tip2233{
+	display: none;
+	width: 117px;
+	height: 333px;
+	background: url(../img/tab2233.png);
+	position: absolute;
+	top: 0;
+	right: 50px;
+}
+   /*============导航栏样式结束 =============*/
+/*  含有滚动监听的板块*/
+.b_nav{
+height: 410px;
+width: 980px;
+margin-left: -15px;
+float: left;
+}
+/*热门节目模块*/
+.b_nav_one{
+height: /*260px;*/410px;
+width: 980px;
+margin-left: -15px;
+float: left;
+}
+/*特别推荐模块*/
+.b_nav_two{
+height: 257px;
+width: 980px;
+margin-left: -15px;
+float: left;
+}
+/*中间部分*/
+#mybody{
+	width: 980px;
+	margin: 265px auto 0;
+}
+/*头部*/
+#top_nav{
+	width: 1519px;
+	height: 717px;
+	margin-left: -190px;
+}
+#top_center{
+	margin: 0 auto;
+	width: 980px;
+}
+/*轮播框及其内部样式*/
+#myCarousel{
+	width: 440px;
+	height: 220px;
+}
+/*==================轮播框样式开始=====================*/
+/*轮播里面的超链接阴影效果*/
+#myCarousel a{
+	font-family: "微软雅黑";
+}
+#myCarousel a:hover{
+	text-decoration: none;
+	text-shadow: 0px 0px 1px white;
+}
+.carousel-indicators{
+	display: inline-block;
+	width: 150px;
+	height: 18px;
+	position: absolute;
+	float: right;
+	left: 94%;
+	bottom: -1%;
+}
+#myCarousel{
+	display: inline-block;
+}
+#myCarousel:hover #more_link{
+	display: inline-block;
+}
+#myCarousel ol .active{
+	background: url(../img/icons.png) -854px -728px no-repeat;
+}
+#myCarousel ol .active:hover{
+	background: url(../img/icons.png) -854px -728px no-repeat;
+}
+#myCarousel ol li{
+	/*position: relative;*/
+	width: 18px;
+	height: 18px;
+	border: none;
+	background: url(../img/icons.png) -855px -791px no-repeat;
+}
+#myCarousel ol li:hover{
+	background: url(../img/icons.png) -919px -791px no-repeat;
+}
+#myCarousel  span{
+	display: inline-block;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	display: none;
+	height: 35px;
+	background: linear-gradient(transparent,rgba(0,0,0,0.1) 20%,rgba(0,0,0,0.2) 35%,rgba(0,0,0,0.5) 65%,rgba(0,0,0,0.66));
+	border-radius: 5px;
+}
+#myCarousel  span a{
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 20px;
+	color: #fff;
+	font-size: 14px;
+}
+#more_link{
+	line-height: 25px;
+	font-size: 12px;
+	border-radius: 3px;
+	text-align: center;
+	display: none;
+	position: absolute;
+	width: 50px;
+	height: 24px;
+	background: rgba(0,0,0,0.5);
+	color: white;
+	left: 375px;
+	margin-top: -60px;
+}
+.item img{
+	border-radius: 5px;
+}
+/*==================轮播框样式结束=====================*/
+/*=============轮播右边框框的样式================*/
+#myCarousel_right{
+	width: 540px;
+	height: 240px;
+	position: relative;
+}
+.myCarousel_right_items{
+	width: 180px;
+	height: 100px;
+	margin-bottom: 20px;
+	list-style-type: none;
+}
+.myCarousel_right_items>div{
+	width: 160px;
+	height: 100px;
+	float: right;
+	position: relative;
+}
+.preview img{
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+.myCarousel_right_items .info{
+	width: 100%;
+	height: 31px;
+	padding: 10px 0 3px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	background: linear-gradient(transparent,rgba(0,0,0,0.1) 20%,rgba(0,0,0,0.2) 35%,rgba(0,0,0,0.6) 65%,rgba(0,0,0,0.9));
+	border-radius: 0 0 4px 4px;
+	color: white;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+.myCarousel_right_items:hover .info{
+	top: 0;
+	overflow: hidden;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	border-radius: 4px;
+}
+/*鼠标移上去之前里面的元素样式*/
+.myCarousel_right_items .info .info_word{
+	height: 38px;
+	line-height: 18px;
+	overflow: hidden;
+	margin: 0 5px;
+	word-wrap: break-word;
+}
+
+.myCarousel_right_items .info .up{
+	margin-left: 5px;
+	margin-top: 8px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #99a2aa;
+	transition: .2s all linear;
+}
+.myCarousel_right_items .info .play{
+	margin-top: -5px;
+	margin-left: 5px;
+	color: #99a2aa;
+	transition: .2s all linear;
+}
+/*左右拉小按钮的样式*/
+#myCarousel_right .prev{
+	display: none;
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	padding: 13px 5px 13px 10px;
+	border-radius: 0 2px 2px 0;
+	margin-left: 20px;
+	width: 35px;
+	top: 38%;
+	text-align: center;
+	color: #fff;
+	/*这三个分开写,可以把背景图片和底色同时使用*/
+	background-color: rgba(0,0,0,0.6);
+	background-image: url(../mainpic/icons2.png);
+	background-position: 6px -1207px;
+	cursor: pointer;
+}
+#myCarousel_right .next{
+	display: none;
+	position: absolute;
+	background-color: rgba(0,0,0,0.6);
+	padding: 13px 10px 13px 5px;
+	border-radius: 2px 0 0 2px;
+	margin-left: 505px;
+	width: 35px;
+	top: 38%;
+	text-align: center;
+	color: #fff;
+	/*这三个分开写,可以把背景图片和底色同时使用*/
+	background-color: rgba(0,0,0,0.6);
+	background-image: url(../mainpic/icons2.png);
+	background-position: 25px -1260px;
+	cursor: pointer;
+}
+#myCarousel_right:hover .prev,#myCarousel_right:hover .next{
+	display: block;
+}
+
+
+/*轮播框右边样式结束*/
+/*========特别推荐板块样式开始============*/
+#new_works{
+	margin-top: 20px;
+	width:980px;
+	height: 245px; 
+}
+.pt_link{
+	display: inline-block;
+	padding: 6px 20px;
+}
+.new_works_left{
+	width: 700px;
+	height: 194px;
+}
+/*顶部*/
+.new_works_left .works_left_head{
+	overflow: visible;
+	width: 700px;
+	height: 24px;
+}
+.new_works_left .works_left_head .work_head_pic{
+	display: inline-block;
+	margin-top: -5px;
+	width: 40px;
+	height: 40px;
+	background: url(../img/icons.png) -140px -78px no-repeat;
+}
+.works_left_head .work_head_title{
+	margin-left: 7px;
+	width: 48px;
+	height: 24px;
+	display: inline-block;	
+}
+.work_head_title h2{
+	margin-top: 0;
+	height: 24px;
+	font-size: 24px;
+}
+.works_left_head .pt_link a{
+	color: #6d757a;
+}
+.works_left_head .pt_link a:hover{
+	color: dodgerblue;
+}
+.works_left_body{
+	margin-top: 20px;
+	width: 720px;
+	height: 160px;
+	padding: 0;
+}
+.works_list{
+	width: 180px;
+	height: 148px;
+	float: left;
+	list-style-type: none;
+}
+/*里面边框relative*/
+.works_list_d{
+	position: relative;
+	width: 160px;
+	height: 148px;
+	cursor: pointer;
+}
+.works_list .works_list_d .pic{
+	width: 160px;
+	height: 100px;
+	border-radius: 4px;
+}
+.works_list .works_list_d .pic img{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border-radius: 4px;
+}
+.works_list .works_list_d .pic .time{
+	display: none;
+	position: absolute;
+	margin-top: -20px;
+	margin-left: 126px;
+	line-height: 20px;
+	border-top-left-radius: 4px;
+	height: 20px;
+	background: rgba(0,0,0,0.6);
+}
+.works_list .works_list_d .pic .time b{
+	font-weight: lighter;
+	color: white;
+	margin: 0 5px 0 5px;
+}
+.works_list .works_list_d .pic .adv{
+	position: absolute;
+	margin-top: -20px;
+	line-height: 20px;
+	border-top-right-radius: 4px;
+	height: 20px;
+	color: white;
+	background: rgba(0,0,0,0.6);
+}
+.works_list .works_list_d .pic .adv b{
+	font-weight: lighter;
+	color: white;
+	margin: 0 5px 0 5px;
+}
+.works_list:hover .works_list_d .pic .time{
+	display: inline
+}
+.works_list .works_list_d .word{
+	display: inline-block;
+	margin-top: 0;
+	padding-top: 5px;
+	height: 48px;
+}
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+.more_info{
+	position: absolute;
+	z-index: 10000;
+	width: 322px;
+	height: 184px;
+	border: 1px solid #ccd0d7;
+	background-color: #fff;
+	border-radius: 4px;
+	box-shadow: rgba(0,0,0,0.16) 0 2px 4px;
+	font-size: 12px;
+	cursor: pointer;
+}
+.more_info .title{
+	margin-top: 10px;
+	padding-left: 12px;
+	width: 318px;
+	height: 20px;
+	font-size: 12px;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+.more_info .date{
+	color: #99a2aa;
+	width: 318px;
+	height: 20px;
+	font-size: 12px;
+	margin-top: 4px;
+}
+.more_info .date .author,.more_info .date .upload_time{
+	line-height:12px;
+	height: 12px;
+	display: inline-block;
+	padding:0 12px;
+}
+.more_info .date .upload_time{
+	border-left:1px solid #99a2aa ;
+}
+.more_info .picture{
+	margin: 0 auto;
+	width: 296px;
+	height: 86px;
+	border-top: 1px solid #e5e9ef ;
+	border-bottom: 1px solid #e5e9ef;
+}
+.more_info .picture .pic{
+	margin-top: 12px;
+	width: 96px;
+	height: 60px;
+}
+.more_info .picture .pic img{
+	width: 100%;
+	height: 100%;
+}
+.more_info .picture .mes{
+	line-height:20px;
+	margin-top: 10px;
+	font-size: 12px;
+	overflow: hidden;
+	color: #99a2aa;
+	width: 200px;
+	height: 60px;
+	padding-left: 8px;
+}
+.more_info .data{
+	height: 37px;
+	width: 296px;
+	margin: 0 auto;
+	padding-top: 11px;
+}
+.more_info .data span{
+	padding-bottom: 0;
+	line-height: 12px;
+	display: inline-block;
+	width: 74px;
+	height: 12px;
+	color: #99a2aa;
+	padding-left: 16px;
+}
+.more_info .data .bofang{
+	background: url(../img/icons.png) -282px -90px no-repeat;
+}
+.more_info .data .danmu{
+	background: url(../img/icons.png) -282px -218px no-repeat;
+}
+.more_info .data .shouchang{
+	background: url(../img/icons.png) -282px -346px no-repeat;
+}
+.more_info .data .toubi{
+	background: url(../img/icons.png) -282px -410px no-repeat;
+}
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*========================鼠标移上去,上面弹出框样式适用于所有弹出框======================*/
+/*                                 特别推荐右边样式                                                                                         */
+.new_works_right{
+	width: 260px;
+	height: 195px;
+}
+.new_works_right .right_head{
+	width: 260px;
+	height: 34px;
+	border-radius: 5px;
+	background: #e5e9ef;
+}
+.new_works_right .right_head span{
+	display: inline-block;
+	width: 130px;
+	height: 10px;
+	padding-left: 15px;
+	line-height: 10px;
+	margin-top: 12px;
+	
+}
+.new_works_right .right_head span a{
+	color: #6d757a;
+}
+.new_works_right .right_head span a:hover{
+	color: dodgerblue;
+}
+.new_works_right .right_head .new_online{
+	border-left: 1px solid #b8c0cc;
+}
+.new_works_right .right_body{
+	margin-top: 10px;
+}
+.new_works_right .right_body img{
+	width: 260px;
+	height: 150px;
+	border-radius: 5px;
+}

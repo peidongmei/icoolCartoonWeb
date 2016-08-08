@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<link rel="stylesheet" type="text/css" href="/bilibili/css/userRegist.css"/>
+			<link rel="stylesheet" type="text/css" href="/bilibili/reuse_css/regist_head.css"/>
+			<link rel="stylesheet" type="text/css" href="/bilibili/reuse_css/foot_one.css"/>
+		 <title>哔哩哔哩弹幕视频网 - ( ゜- ゜)つロ  乾杯~  - bilibili</title> 
+			<link rel="shortcut icon" href="/bilibili/img/favicon.ico">
+	</head>
+	<body>
+		<div id="head"></div>
+		<div id="pagebody">
+			<div id="pagebody_top">
+				<div id="pic_zhuce">
+				</div>
+			<div id="pagebody_undear">
+				<div id="pagebody_center" class="clearFix">
+				<form action="/bilibili/user/regist" method="post">
+					<div id="nickname_place" class="input_div">
+						<input type="text" name="nickname" id="nickname" placeholder="昵称（例：哔哩哔哩）" value="" />
+					</div>
+					<div id="pwd_place" class="input_div">
+						<input type="password" name="password" id="pwd" placeholder="密码（6-16个字符组成,区分大小写）" value="" />
+					</div>
+					<div id="phone_place" class="input_div" class="float_left">
+						<select name="country" id="country" class="float_left">
+							<option value="">中国大陆</option>
+							<option value="">澳门特区</option>
+							<option value="">台湾</option>
+							<option value="">美国</option>
+							<option value="">香港</option>
+							<option value="">比利时</option>
+							<option value="">澳大利亚</option>
+							<option value="">法国</option>
+							<option value="">加拿大</option>
+							<option value="">日本</option>
+							<option value="">新加坡</option>
+							<option value="">韩国</option>
+							<option value="">马来西亚</option>
+						</select>
+						<div id="phone_number" class="float_left">
+							<input type="text" name="account" placeholder="填写常用手机号(随便输入个账号吧)" id="phone_number_input" value="" />
+						</div>
+					</div>
+					<a class="regist_lianjie" id="email_reigst" href="https://passport.bilibili.com/register/mail">用邮箱注册></a>
+					<div id="yanzheng_place" class="input_div">
+						<input type="text"  id="yanzhengma" placeholder="手机验证码" value="" />
+					</div>
+					<a id="get_yanzhengma" href=""><span id="get_text">
+						点击获取
+					</span></a>
+					<div id="agree_place">
+						<input type="checkbox"  id="agree_button" checked="checked" value="" />
+						<span id="agree-items">
+							我已同意<a href="https://passport.bilibili.com/register/licence" class="regist_lianjie">《哔哩哔哩弹幕网用户使用协议》</a>和<a href="http://www.bilibili.com/html/help.html#q" class="regist_lianjie">《哔哩哔哩弹幕网社区规范》</a>
+						</span>
+					</div>
+					<div id="submit_place">
+						<input id="submit" type="submit" value="注册"/>
+					</div>
+					<a id="to_login" href="https://passport.bilibili.com/login" class="regist_lianjie">已有账号，直接登录></a>
+				</form>
+			</div>
+			</div>	
+			</div>
+		</div>
+		<div id="foot"></div>
+	</body>
+	<script src="/bilibili/js/jquery-1.12.4.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		/*加载通用头部和尾部*/
+			$("#head").load("/bilibili/reuse/regist_head.html");
+			$("#foot").load("/bilibili/reuse/foot_one.html")
+		</script>
+</html>

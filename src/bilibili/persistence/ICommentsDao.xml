@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="bilibili.persistence.ICommentsDao">
+	
+
+<cache eviction="FIFO" flushInterval="60000" size="512" readOnly="true"/>
+
+
+	<!-- 联表查询二级评论信息 -->
+	<select id="getReplyComm" resultMap="queryReplyComm">
+	    select * from replycomm where rawid = #{param1}
+	</select>
+	<resultMap type="Replycomm" id="queryReplyComm">
+		<id property="id" column="id" />
+		<result property="userid" column="userid"/>
+		<result property="rawid" column="rawid"/>
+		<result property="content" column="content"/>
+		<result property="writetime" column="writetime"/>
+		<association property="user" column="userid" select="queryUserById"></association>
+		<association property="approvenum" column="id" select="countReplyApprove"></association>
+	</resultMap>
+	<select id="countReplyApprove" resultType="Integer">
+		select count(userid) from laud_next where replyid = #{param1}
+	</select>
+	
+	
+	<!-- 联表查询的查询用户信息表格，关注和粉丝需要查其他表 -->
+	<select id="getBox" resultMap="queryUserBox" >
+		select * from buser where id = #{param1}
+	</select>
+	<resultMap type="UserBox" id="queryUserBox">
+		<association property="user" column="id" select="queryUserById"></association>
+		<association property="focus" column="id" select="countFocus"></association>
+		<association property="fans" column="id" select="countFans"></association>
+	</resultMap>
+	<select id="countFocus" resultType="Integer">
+		select count(up_id) focus from concernup where user_id = #{param1}
+	</select>
+	<select id="countFans" resultType="Integer">
+		select count(user_id) focus from concernup where up_id = #{param1}
+	</select>
+	
+	
+	<insert id="addRaw" >
+		insert into rawcomm(id,userid,videoid,content) values(banben_com_seq.nextval,#{param2.id},10001,#{param1})
+	</insert>
+	
+	<insert id="addReply">
+	 insert into replycomm(id,content,rawid,userid)
+ 		 values(banben_replycomm_seq.nextval,#{param1},#{param2},#{param3.id})
+	</insert>
+	
+	<!-- 联表查询的查询一级评论 -->
+	<select id="getRawComm" resultMap="queryRawComm">
+		select * from (select x.*,rownum rn from (select * from rawcomm order by id desc) x where (#{param2}*5+1) >rownum ) where rn>=((#{param2}-1)*5+1)
+	</select>
+	<select id="getRawCommByReply" resultMap="queryRawComm">
+		select * from (select xx.*,rownum rn from (select s.*,rs.counts from rawcomm s, (select distinct(a.id),nvl(d.counts,0) counts 
+		from rawcomm a left join (select r.*,counts from replycomm r,(select rawid,count(*) counts from replycomm group by rawid) c 
+		where r.rawid = c.rawid) d on a.id = d.rawid ) rs 
+		where s.id = rs.id order by counts desc) xx where (#{param2}*5+1) > rownum)  where rn >= ((#{param2}-1)*5+1)
+	</select>
+	<select id="getRawCommByApprove" resultMap="queryRawComm">
+		select * from (select xx.*,rownum rn from (select r.*,nvl(a.counts,0) counts from 
+		rawcomm r left join (select rawcommid,count(*)  counts from laud group by rawcommid) a on r.id=a.rawcommid order by counts desc) xx 
+		where (#{param2}*5+1) > rownum) where rn >= ((#{param2}-1)*5+1)
+	</select>
+	
+	<resultMap type="Rawcomm" id="queryRawComm">
+		<id property="id" column="id" />
+		<result property="writetime" column="writetime"/>
+		<result property="content" column="content"/> 
+		<result property="client" column="client"/>
+		<association property="approvenum" column="id" select="countApprove"></association>
+		<association property="user" column="userid" select="queryUserById"></association>
+	</resultMap>
+	
+	<!-- 根据ID查询用户所有信息 -->
+	<select id="queryUserById" resultType="User">
+		select * from buser where id = #{param1}
+	</select>
+	
+	<select id="countApprove" resultType="Integer">
+		select count(userid)  from laud where rawcommid = #{param1}
+	</select>
+	
+	<!-- 根据用户ID检测用户是否为该一级条评论点赞过 -->
+	<select id="checkraw" resultType="Integer">
+		select count(*) from laud where rawcommid = #{param1} and userid = #{param2.id}
+	</select>
+	<!-- 根据用户ID检测用户是否为该条二级评论点赞过 -->
+	<select id="checkreply" resultType="Integer">
+		select count(*) from laud_next where replyid = #{param1} and userid = #{param2.id}
+	</select>
+	<!-- 查询总评论条数 -->
+	<select id="countcomms" resultType="Integer">
+		select count(*) from rawcomm where videoid = #{param1}
+	</select>
+	
+	
+	<!-- 一级评论取消赞 -->
+	<delete id="deleteRawZan">
+		delete from laud where rawcommid = #{param1} and userid = #{param2.id}
+	</delete>
+	<!-- 一级评论添加赞 -->
+	<insert id="addRawZan">
+		insert into laud(videoid,rawcommid,userid) values(10001,#{param1},#{param2.id})
+	</insert>
+	<!-- 二级评论添加赞 -->
+	<insert id="addReplyZan">
+		insert into	laud_next(videoid,replyid,userid) values(10001,#{param1},#{param2.id})
+	</insert>
+	<!-- 二级评论取消赞 -->
+	<delete id="deleteReplyZan">
+		delete from laud_next where replyid = #{param1} and userid = #{param2.id}
+	</delete>
+	
+	
+	
+</mapper>

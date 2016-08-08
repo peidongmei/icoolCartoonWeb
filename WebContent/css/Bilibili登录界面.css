@@ -1,0 +1,559 @@
+@CHARSET "UTF-8";
+li{
+	list-style: none;
+	float: left;
+	margin-left: 10px;
+	margin-top: -5px;
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+.clearFix{
+	content: none;
+	display: block;
+	clear: both;
+}
+.home{
+	float: left;
+	margin-left: -50px;
+	padding-left: 2px;
+	background: url(../img/icons.png) -920px -84px no-repeat;
+}
+
+.friend{
+	float: left;
+	margin-left: 5px;
+}
+#head_mid_nav{
+	width: 379px;
+	height: 42px;
+}
+#head_all{
+	background:white;
+	position: relative;
+	left: 0px;
+	top: 0px;
+}
+#head_mid{
+	width: 980px;
+	height: 42px;
+	margin: -1px auto 0px;
+	position: relative;
+}
+.clearFix:after{
+	content: none;
+	display: block;
+	clear: both;
+}
+.nav{
+	padding-left: 20px;
+	font-size: 13px;
+}
+/*======================超链接激活时显示蓝色==================*/
+a:hover{
+	color: dodgerblue;
+}
+#head_mid_select{
+	width: 171px;
+	height: 42px;
+	float: right;
+	margin-right: -4px;
+	margin-top: -58px;
+}
+#tougaoqu{
+	float: right;
+	margin-top: -30px;
+	font-size: 13px;
+}
+#tougaoqu{
+	width: 58px;
+	height: 48px;
+	text-align: center;
+	background: url(../img/b-post.png);
+	/*此处为了覆盖下面的背景图片，使用了浮动*/
+	position: absolute;
+	font-size: 14px;
+	left: 912px;
+	top: 15px;
+	z-index: 2;
+}
+#tougaoqu #i_tougao{
+	position: relative;
+	top: 11px;
+	color: white;
+}
+#i_account{
+	position: relative;
+	top: 2px;
+	right: 34px;
+	font-size: 13px;
+}
+#i_account .i_select{
+	float: right;
+	margin-right: 10px;
+}
+#i_regist{
+	padding-left: 10px;
+}
+/*================右上角的小竖线================*/
+.little_split{
+	float: right;
+	height: 12px;
+	border-left: solid 1px #222;
+	margin-top: 4px;
+}
+
+#head_mid_search{
+	height: 32px;
+	position: absolute;
+	left: 669px;
+	top: -10px;
+}
+#head_mid_search #user_search_input{
+	padding-left: 10px;
+	border-radius: 16px;
+	border: solid 1px #ccd0d7;
+	width: 107px;
+	height: 28px;
+	font-size: 12px;
+	color: darkgray;
+}
+
+#head_mid_search #confirm_search{
+	display: none;
+	height: 20px;
+	width: 20px;
+}
+#head_mid_search #replace_confirm_sear{
+	position: absolute;
+	float: right;
+	width: 20px;
+	height: 20px;
+	background: url(../img/icons.png) -791px -728px no-repeat;
+	top: 7px;
+	left: 95px;
+}
+#nextheader{
+	position: absolute;
+	top: 42px;
+	left: 0px;
+	width: 100%;
+	height: 86px;
+	background: #00a0d8;
+	z-index: 1;
+}
+#mid_bg{
+	width: 980px;
+	height: 106px;
+	margin: 0px auto;
+	background: url(../img/rl_top.png) no-repeat;
+}
+
+/*============================下面的BODY部分=========================*/
+#pagebody{
+	margin: 90px auto;
+	width: 980px;
+	height: 364px;
+}
+#pagebody_top{
+	width: 980px;
+	height: 25px;
+	border-bottom: solid 2px #ddd;
+}
+
+/*===========================中间的登录大字==========================*/
+#pic_login{
+	width: 120px;
+	height: 47px;
+	margin: 0px auto;
+	background: url(../img/t2.png);
+}
+
+/*============================中间的竖线===========================*/
+#line{
+	width: 1px;
+	height: 240px;
+	margin-top: 48px;
+	margin-left: 10px;
+	background: #ddd;
+	float: left;
+}
+
+
+/*==========================左边的===========================*/
+#under_left{
+	width: 480px;
+	height: 260.5px;
+	float: left; 
+	margin-top: 48px;
+}
+#under_left_in{
+	width: 420px;
+	height: 260.5px;
+	margin: auto;
+}
+#erweima{
+	width: 140px;
+	height: 140px;
+	background: url(../img/erweima.png);
+	margin: 42px auto;
+}
+#get_erweima{
+	font-size: 18px;
+	color: #222;
+	letter-spacing: 3px;
+	float: left;
+	margin-left: 137px;
+	margin-top: -35px;
+}
+#to_client{
+	font-size: 14px;
+	color: #717171;
+}
+#client_url{
+	font-size: 12px;
+	color: #00c7f3;
+}
+#client_url:hover{
+	color: hotpink;
+}
+#to_client{
+	float: left;
+	margin-left: 146px;
+	margin-top: -16px;
+	position: relative;
+	z-index: 3;
+}
+#bilibili_niang{
+	width: 480px;
+	/*height: 155px;*/                    /*影响bilibili娘衣服下面是否有剪切效果*/
+	height: 141px;
+	float: left;
+	left: 0px;
+	background: url(../img/2233login.png);
+	margin-top: -155px;
+	position: relative;
+	z-index: 2;
+}
+#small_tv{
+	width: 70px;
+	height: 70px;
+	background: url(../img/tv.gif);
+	float: left;
+	margin-top: -322px;
+	margin-left: 163px;
+}
+/*==========================右边的===========================*/
+#under_right{
+	width: 401px;
+	height: 317px;
+	float: left;
+	margin-top: 18px;
+	margin-left: 47px;
+	/*background: pink;*/
+}
+#under_right #user_form .bbz{
+	width: 400;
+	height: 40px;
+	margin-top: 30px;
+}
+/*#box_two,#box_three{
+	margin-top: 30px;
+}*/
+#e_mail,#pwd,#yanzhenma{
+	height: 38px;
+	border: solid 1px #ddd;
+	border-radius: 2px;
+	padding-left: 10px;
+	
+}
+#e_mail,#pwd{
+	width: 388px;
+}
+#yanzhenma{
+	width: 169px;
+}
+#box_three{
+	position: relative;
+	width: 401px;
+}
+#box_three #forget_pwd{
+	position: absolute;
+	left: 332px;
+	top: -19px;
+	font-size: 12px;
+	color: #00A0D8;
+}
+#box_three #forget_pwd:hover{
+	color: orangered;
+}
+#box_four{
+	padding-top: 7px;
+	width: 401px;
+	height: 25px;
+	font-size: 12px;
+	color: #717171;
+	position: relative;				
+}
+#box_four #attention{
+	position: absolute;
+	left: 80px;
+	top: 9px;
+	color: #bbb;
+}
+#remember{
+	position: relative;
+	left: -4px;
+}
+#for_remember{
+	position: absolute;
+	top: 9px;
+	left: 20px;
+}
+#box_five{
+	width: 401px;
+	height: 38px;
+}
+#box_five #login_in,#to_regist{
+	float: left;
+}
+#box_five #login_in{
+	color: white;
+	font-size: 14px;
+	width: 182px;
+	height: 38px;
+	cursor: pointer;
+	border: solid 1px #0381aa;
+	border-radius: 2px;
+	background: #00a7de;
+}
+#box_five #login_in:hover{
+	background: deepskyblue;
+}
+#box_five #to_regist{
+	text-align: center;
+	font-size: 14px;
+	color: #555;
+	width: 182px;
+	height: 36px;
+	border: solid 1px #ccc;
+	border-radius: 2px;
+	background: white;
+	margin-left: 35px;
+}
+#box_five #to_regist #zhuce{
+	position: relative;
+	top: 7px;
+}
+#box_five #to_regist:hover{
+	color: #555;
+	background: #f6f9fa;
+}
+#box_six{
+	margin-top: 10px;
+	width: 401px;
+	height: 21px;
+	font-size: 12px;
+}
+#box_six #weibo_login,#qq_login{
+	float: left;
+}
+#box_six #weibo_login{
+	width: 100px;
+	height: 21px;
+	background: url(../img/snsicon.png) no-repeat;
+}
+#box_six #weibo_login #weibo_lianjie{
+	width: 72px;
+	color: #717171;
+	float: left;
+	padding-left: 25px;
+	margin-top: 3px;
+}
+#box_six #weibo_login #weibo_lianjie:hover{
+	color: #717171;
+}
+
+#box_six #qq_login{
+	margin-left: 47px;
+	width: 100px;
+	height: 21px;
+	background: url(../img/snsicon.png) 0 -41px no-repeat ;
+}
+#box_six #qq_login #qq_lianjie{
+	width: 68px;
+	color: #717171;
+	float: left;
+	padding-left: 25px;
+	margin-top: 3px;
+}
+#box_six #qq_login #qq_lianjie:hover{
+	color: #717171;
+}
+/*==========================底部的===========================*/
+#footer{
+	width: 100%;
+	height: 280px;
+	background: #F6F9FA;
+	float: left;
+	margin-top: -70px;
+}
+#footer #foot_mid{
+	width: 980px;
+	height: 200px;
+	margin: 30px auto;
+	/*background: gainsboro;*/            /* =============以后去掉============*/
+}
+#footer #foot_mid #foot_mid_top{
+	width: 980px;
+	height: 100px;
+	font-size: 14px;
+	/*background: pink;*/				/* =============以后去掉============*/
+}
+.many_links,.foot_nav{
+	width: 86px;
+	height: 22px;
+	float: left;
+
+	/*border: solid 1px black;*/			/* =============以后去掉============*/
+}
+
+.foot_nav{
+	color: #717171;
+}
+
+
+#foot_mid_top_left,#foot_mid_top_mid,#foot_mid_top_right{
+	float: left;
+}
+
+#foot_mid_top_left{
+	width: 306px;
+	height: 100px;
+	/*background: pink;*/				/* =============以后去掉============*/
+}
+.foot_nav{
+	width: 306px;
+	margin-top: 1px;
+}
+/*#about_us_one,#about_us_two{
+	margin-top: 12px;
+}*/
+.first_level{
+	margin-top: 12px;
+}
+#about_us_three{
+	width: 100px;
+	height: 36px;
+	margin-top: 16px;
+	background: url(../img/b-taobao.png);
+}
+#about_us_three #bilibili_taobao{
+	padding: 0 100px 18px 0;
+}
+#about_us_four,#about_us_five{
+	position: relative;
+	top: -18px;
+}
+
+#foot_mid_top_mid{
+	width: 336px;
+	height: 100px;
+	border-left: solid 1px #e5e9ef;			/* =============以后去掉============*/
+	
+}
+
+#foot_mid_top_right{
+	width: 336px;
+	height: 100px;
+	border-left: solid 1px #e5e9ef;			/* =============以后去掉============*/
+}
+
+#help_center_one,#help_center_four,#foot_nav_two{
+	margin-left: 30px;
+}
+#help_center_three{
+	margin-left: 20px;
+}
+#help_center_five{
+	width: 120px;
+}
+/*#help_center_one,#help_center_two,#help_center_three{
+	margin-top: 12px;
+}*/
+#gateway_one,#gateway_four,#gateway_seven,#gateway{
+	margin-left: 30px;
+}
+/*=====================最后的声明=================*/
+#foot_mid_under_left{
+	height: 76px;
+	width: 650px;
+	/*background: greenyellow;  */             /* =============以后去掉=============*/
+	margin-top: 23px;
+}
+
+.last_foot_blocks{
+	height: 80px;
+	float: left;
+}
+#foot_one{
+	width: 106px;
+	height: 76px;
+	background: url(../img/footpic.gif) no-repeat;
+}
+#foot_two{
+	width: 268px;
+	margin-top: -6px;
+	margin-left: 10px;
+}
+#foot_three{
+	width: 214px;
+	height: 48px;
+}
+.foot_span{
+	font-size: 12px;
+	/*display: inline-block;*/
+	color: #717171;
+	float: left;
+	margin-top: 7px;
+}
+#foot_three{
+	width: 214px;
+	height: 48px;
+	margin-top: -6px;
+	margin-left: 8px;
+}
+
+#foot_mid_under_right{
+	float: right;
+	margin-top: -76px;
+	width: 310px;
+	height: 80px;
+}
+#foot_mid_under_right a{
+	text-align: center;
+	display: inline-block;
+}
+#pic_phone,#pic_weibo,#pic_weixin{
+	width: 65px;
+	height: 65px;
+	text-align: center;
+}
+.last_links{
+	font-size: 12px;
+	position: relative;
+	top: -5px;
+}
+#pic_phone{
+	background: url(../img/icons.png) -1025px -193px no-repeat;
+}
+#pic_weibo{
+	background: url(../img/icons.png) -1025px -321px no-repeat;
+}
+#pic_weixin{
+	background: url(../img/icons.png) -1025px -65px no-repeat;
+}
+#weixin,#weibo{
+	margin-left: 20px;
+}
